@@ -4,7 +4,7 @@ Ever wanted to have weather, Spotify, and other (coming soon) data endpoints ava
 
 Me too.
 
-So here a barely working, HTML/Javascript based web-app (or desktop app, with a few tweaks it works great in Electron) that pulls Spotify and local weather information and displays it in an easy to read and realtively good looking way. It also supports Spotify media controls, allowing for song pause/playing and skipping.
+So heres a barely working, HTML/Javascript based web-app (or desktop app, with a few tweaks it works great in Electron) that pulls Spotify and local weather information and displays it in an easy to read and realtively good looking way. It also supports Spotify media controls, allowing for song pause/playing and skipping.
 
 # Missing Features
 
