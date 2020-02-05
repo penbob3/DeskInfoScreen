@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Desktop Monitor</title>
+<link href="Main.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="require.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script type="text/javascript" src="jquery.quickfit.js"></script>
+<script type="text/javascript" src="Main.js"></script>
+<script type="text/javascript" src="WebWorker.js"></script>
+<script>
+</script>
+</head>
+
+<body onload="pageBoot()" class="bg" style="overflow: hidden;">
+	<div id="loadscreen">
+		<div class="loadicon">
+		<div class="loadingio-spinner-blocks-t2qapl1qpx"><div class="ldio-1yzsnucn6e4">
+		<div style='left:38px;top:38px;animation-delay:0s'></div><div style='left:80px;top:38px;animation-delay:0.125s'></div><div style='left:122px;top:38px;animation-delay:0.25s'></div><div style='left:38px;top:80px;animation-delay:0.875s'></div><div style='left:122px;top:80px;animation-delay:0.375s'></div><div style='left:38px;top:122px;animation-delay:0.75s'></div><div style='left:80px;top:122px;animation-delay:0.625s'></div><div style='left:122px;top:122px;animation-delay:0.5s'></div>
+	</div>
+	</div>
+	</div>
+	</div>
+	<div id="exitmenu" onclick="closeAll()"></div>
+	<div id="background" class="backnotblur"></div>
+	<div id="closediv" onclick="window.close()">
+		<img id="closex" src="closex.png" alt="Missing!">
+	</div>
+	<div id="timebar" class="midcol">
+			<div class="dateinfo">
+				<h4 id="datestring"></h4>
+			</div>
+		</div>
+	<div id="wrapper">
+		<div id="weatherbar" class="frontweather weatherclick sidewrap leftcol outercols topboxes nonblur">
+			<div id="weathermin" class="sidewrap leftcol outercols topboxes">
+			<div id="weatherclickdiv" onclick="togweather()">
+			
+			</div>
+				<div class="weathericon">
+					<img id="weathericon" class="weathericonimg" src="Icons/rainy.png" alt="Image Missing!" height="120" width="120">
+				</div>
+				<div class="weatherinfo">
+					<div class="weatherinfolines">
+						<h2 id="temp"></h2>
+					</div>
+					<div class="weatherinfolines">
+						<h2 id="humid"></h2>
+					</div>
+					<div class="weatherinfolines">
+						<h2 id="descript"></h2>
+					</div>
+				</div>
+			</div>
+			<div id = "weatherarrow" class = "arrow">	</div>
+			<div id = "weatherextra" class = "underweather">
+				<div id="bigweathericondiv">
+					<img id="bigweathericon" src="" alt="Icon not found!">
+				</div>
+				
+				<div id="locationdiv" class="weatherinfo">
+					<h6 id="locationtext" style="text-align: center;">X</h6>
+				</div>
+				<div id="allweatherlines">
+				<div class="weatherinfo">
+					<h6 id="mintext">Min: X</h6>
+				</div>
+				<div class="weatherinfo">
+					<h6 id="maxtext">Max: X</h6>
+				</div>
+				<div class="weatherinfo">
+					<h6 id="feelsliketext">Feels like: X</h6>
+				</div>
+				<div class="weatherinfo">
+					<h6 id="pressuretext">Pressure: X</h6>
+				</div>
+				</div>
+			</div>
+		</div>
+		
+		<div class="colspacer">
+			
+		</div>
+
+		<div id="spotifybar" class="frontspotify spotifyclick sidewrap rightcol outercols topboxes nonblur">
+			<div id="spotifyclickdiv" onclick="togspotify()">
+			
+			</div>
+			<div class="songinfo">
+				<div class="songinfolines">
+					<h3 id="songname"> </h3>
+				</div>
+				<div class="songinfolines">
+					<h3 id="albumname"> </h3>
+				</div>
+				<div class="songinfolines">
+					<h3 id="artistname"> </h3>
+				</div>
+			</div>
+			<div class="songicon">
+				<img id="albumcover" class="songiconimg" src="albumcoverplaceholder.png" alt="Image Missing!" height="100" width="100">
+			</div>
+			
+			<div id = "songarrow" class="arrow">	</div>
+			<div id = "songextra" class = "underweather">
+				<div class="bigicon">
+					<img id="bigalbcover" class="bigalbcover" src="albumcoverplaceholder.png" alt="Image Missing!">
+				</div>
+				<div id="songplayer">
+					
+				</div>
+				<div id="songprogress">
+				
+				</div>
+				<div id="currentsongtime">
+					<h1 id="currentsongtimetext">0:00</h1>
+				</div>
+				<div id="finalsongtime">
+					<h1 id="finalsongtimetext">0:00</h1>
+				</div>
+				<div id="mediacontrols">
+					<div id="previcon" onclick="sendMoveSong(false)">
+						<img src="previcon.png" height="48px" alt="Image Missing!">
+					</div>
+					<div onclick="sendTogglePlayback()" id="playpauseimg">
+						<img id="playpauseicon" src="play.png" height="64px" alt="Image Missing!">
+					</div>
+					<div id="nexticon" onclick="sendMoveSong(true)">
+						<img src="nexticon.png" height="48px" alt="Image Missing!">
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
